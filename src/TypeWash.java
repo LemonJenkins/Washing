@@ -1,15 +1,18 @@
 
 public enum TypeWash {
-    CAR(1), MOTORCYCLE(2), PESUN(2), TRUCK(3);
+    CAR(1, "CAR"), MOTORCYCLE(2, "MOTORCYCLE"), PESUN(2, "PESUN"), TRUCK(3, "TRUCK");
 
     private int id;
+    private String nameTypeWash;
 
-    private TypeWash(int id) {
+    private TypeWash(int id, String nameTypeWash) {
         this.id = id;
+        this.nameTypeWash = nameTypeWash;
+
     }
 
-    public int getValueById(int id) {
-        return ;
+    public String getNtwById() {
+        return nameTypeWash;
     }
 
     public int getId() {
