@@ -7,10 +7,16 @@ class ConverterNumbers {
     static void convertInExpToDec(String numberInExp) {
         double convertNumber;
         try {
-            convertNumber = Double.valueOf(numberInExp.toUpperCase());
-            System.out.println(convertNumber);
-        } catch (NumberFormatException e) {
-            System.out.println("Incorrect number");
+            convertNumber = Double.parseDouble(numberInExp);
+            System.out.printf("%e \n", convertNumber);
+        } catch (NumberFormatException t) {
+            try {
+                convertNumber = Double.valueOf(numberInExp.toUpperCase());
+                System.out.println(convertNumber);
+            } catch (NumberFormatException e) {
+                System.out.println("Incorrect number");
+            }
+
         }
     }
 
